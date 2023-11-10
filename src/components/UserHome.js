@@ -36,7 +36,7 @@ function UserHome() {
       <div className="container-lg">
         <div style={{ paddingTop: "0.9vh" }}>
           <h1 className="text-center " style={{ borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.627)", padding: "1vh 0vh",fontFamily:"Gill Sans Extrabold" }}>Language Learning App</h1>
-          <p className="btn btn-md h3 " style={{ borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.627)", paddingBottom: "2vh", fontWeight: "bold",marginRight: "2vw", fontFamily:"cursive"}}><i class="bi bi-person-circle"></i>&ensp{Name}</p>
+          <p className="btn btn-md h3 " style={{ borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.627)", paddingBottom: "2vh", fontWeight: "bold",marginRight: "2vw", fontFamily:"cursive"}}><i class="bi bi-person-circle"></i> &ensp; {Name}</p>
           <button onClick={() => handlePageChange("home")} className="btn btn-md h3 " style={{marginRight: "2vw", borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.627)", paddingBottom: "2vh", fontWeight: "bold" }}>Home</button>
           <button onClick={() => handlePageChange("submissions")} className="btn btn-md h3 " style={{ borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.627)", paddingBottom: "2vh", fontWeight: "bold" }}>Submissions</button>
           <div style={{ textAlign: "end", marginTop: "-55px" }}>
