@@ -6,7 +6,7 @@ function AdminHomeSlide() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        Axios.get("https://language-app-3v1c.onrender.com/AdminRoute/")
+        Axios.get("https://wordbud-backend.onrender.com/AdminRoute/")
             .then((res) => {
                 if (res.status === 200) setData(res.data);
                 else Promise.reject();
@@ -18,7 +18,7 @@ function AdminHomeSlide() {
     const handleClick = (_id) => {
         const shouldDelete = window.confirm("Are you sure you want to delete this course?");
         if (shouldDelete) {
-            Axios.delete(`https://language-app-3v1c.onrender.com/AdminRoute/delete-content/${_id}`)
+            Axios.delete(`https://wordbud-backend.onrender.com/AdminRoute/delete-content/${_id}`)
                 .then((res) => {
                     if (res.status === 200) {
                         alert("Record deleted successfully");

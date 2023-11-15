@@ -5,7 +5,7 @@ const UserSubmissions = ({ userId }) => {
   const [submissions, setSubmissions] = useState([]);
 
   useEffect(() => {
-    Axios.get(`https://language-app-3v1c.onrender.com/UserRoute/updateuser/${userId}`)
+    Axios.get(`https://wordbud-backend.onrender.com/UserRoute/updateuser/${userId}`)
       .then((res) => {
         if (res.status === 200) {
           setSubmissions(res.data.submissions || []);
@@ -18,7 +18,7 @@ const UserSubmissions = ({ userId }) => {
 
   return (
     <div>
-      <div className="example " style={{ borderRadius: "25px", backgroundColor: "rgba(220,220,220,0.627)", height: "80vh", overflowY: "scroll" }}>
+      <div className="example " style={{ borderRadius: "25px", backgroundColor: "rgba(35,120,65)", height: "80vh", overflowY: "scroll" }}>
         <h2 style={{ textAlign: "center", fontFamily: "Gill Sans Extrabold" }}>Your Submissions</h2>
         {submissions.length === 0 ? (
           <h5 style={{ textAlign: "center", fontSize: "1.5rem", marginTop: "2rem" ,fontFamily:"Gill Sans Extrabold"}}>No submissions Yet</h5>

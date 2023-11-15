@@ -20,7 +20,7 @@ function AdminCreate(){
     };
     
     console.log(data_to_be_added)
-    Axios.post("https://language-app-3v1c.onrender.com/AdminRoute/Addcontent", data_to_be_added)
+    Axios.post("https://wordbud-backend.onrender.com/AdminRoute/Addcontent", data_to_be_added)
       .then((res) => {
         if (res.status === 200) {
           alert("Record added successfully");

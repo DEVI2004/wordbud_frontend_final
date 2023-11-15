@@ -10,7 +10,7 @@ function CreateNewUser() {
     const navigate = useNavigate();  
 
     const handlelogin = () => {
-        const url = 'https://language-app-3v1c.onrender.com/UserRoute';
+        const url = 'https://wordbud-backend.onrender.com/UserRoute';
 
         if (!email.trim()) {
             alert("Please enter a valid email");
@@ -24,7 +24,7 @@ function CreateNewUser() {
                             alert(`Account already existed with ${email}`);
                         } else {
                             var data_to_be_added = { "name": name, "email": email, "password": password, "submissions": [] }
-                            Axios.post("https://language-app-3v1c.onrender.com/UserRoute/Adduser", data_to_be_added)
+                            Axios.post("https://wordbud-backend.onrender.com/UserRoute/Adduser", data_to_be_added)
                                 .then((res) => {
                                     if (res.status === 200) {
                                         alert("Account Created Successfully");
@@ -61,9 +61,9 @@ function CreateNewUser() {
                         <input value={password} onChange={(event) => setPassword(event.target.value)}></input>
                         <br />
                         <br />
-                        <Link to="/" className="text-primary text-center" style={{textDecoration:"none",textAlign:"center"}}><span>Already Have any Account??</span></Link>
+                        <Link to="/" className="text-primary text-center" style={{textDecoration:"none",textAlign:"center"}}><span>Login wordbud</span></Link>
                         <div className="text-center">
-                            <button className="btn btn-secondary">Create</button>
+                            <button className="btn btn-success">Create</button>
                         </div>
                     </form>
                     </div>

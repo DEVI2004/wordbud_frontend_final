@@ -75,7 +75,7 @@ function ContentShow() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await Axios.get(`https://language-app-3v1c.onrender.com/AdminRoute/updatecontent/${id2}`);
+        const response = await Axios.get(`https://wordbud-backend.onrender.com/AdminRoute/updatecontent/${id2}`);
         if (response.status === 200) {
           setcontent(response.data);
         } else {

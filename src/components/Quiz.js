@@ -19,7 +19,7 @@ const Quiz = ({ id, languagename, quizData }) => {
   };
 
   useEffect(() => {
-    Axios.get(`https://language-app-3v1c.onrender.com/UserRoute/updateuser/${id}`)
+    Axios.get(`https://wordbud-backend.onrender.com/UserRoute/updateuser/${id}`)
       .then((res) => {
         if (res.status === 200) {
           setSubmissions(res.data.submissions || []); 
@@ -41,7 +41,7 @@ const Quiz = ({ id, languagename, quizData }) => {
     };
 
     setSubmissions((prevSubmissions) => [...prevSubmissions, newSubmission]);
-    Axios.put(`https://language-app-3v1c.onrender.com/UserRoute/updateuser/${id}`, {
+    Axios.put(`https://wordbud-backend.onrender.com/UserRoute/updateuser/${id}`, {
       submissions: [...submissions, newSubmission],
     })
       .then((res) => {

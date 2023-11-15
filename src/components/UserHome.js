@@ -10,7 +10,7 @@ function UserHome() {
   const [Name,setname]=useState("");
   const mystyle = {
     height: "100vh",
-    backgroundImage: 'url("https://cdn.thecollector.com/wp-content/uploads/2023/09/most-spoken-languages-in-the-world.jpg?width=1400&quality=70")',
+    backgroundImage: 'url("./")',
     backgroundSize: 'cover',
     overflow: "hidden",
   };
@@ -19,7 +19,7 @@ function UserHome() {
     setCurrentPage(page);
   };
   useEffect(() => {
-    Axios.get(`https://language-app-3v1c.onrender.com/UserRoute/updateuser/${id}`)
+    Axios.get(`https://wordbud-backend.onrender.com/UserRoute/updateuser/${id}`)
         .then((res) => {
             if (res.status === 200) {
                 const { name} = res.data;
@@ -35,7 +35,7 @@ function UserHome() {
     <div style={mystyle}>
       <div className="container-lg">
         <div style={{ paddingTop: "0.9vh" }}>
-          <h1 className="text-center " style={{ borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.627)", padding: "1vh 0vh",fontFamily:"Gill Sans Extrabold" }}>Language Learning App</h1>
+          <h1 className="text-center " style={{ borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.627)", padding: "1vh 0vh",fontFamily:"Gill Sans Extrabold" }}>wordbud</h1>
           <p className="btn btn-md h3 " style={{ borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.627)", paddingBottom: "2vh", fontWeight: "bold",marginRight: "2vw", fontFamily:"cursive"}}><i class="bi bi-person-circle"></i> {Name}</p>
           <button onClick={() => handlePageChange("home")} className="btn btn-md h3 " style={{marginRight: "2vw", borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.627)", paddingBottom: "2vh", fontWeight: "bold" }}>Home</button>
           <button onClick={() => handlePageChange("submissions")} className="btn btn-md h3 " style={{ borderRadius: "15px", backgroundColor: "rgba(220,220,220,0.627)", paddingBottom: "2vh", fontWeight: "bold" }}>Submissions</button>

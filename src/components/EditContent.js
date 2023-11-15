@@ -22,7 +22,7 @@ function EditContent() {
     const [newData, setNewData] = useState([]);
 
     useEffect(() => {
-        Axios.get(`https://language-app-3v1c.onrender.com/AdminRoute/updatecontent/${id}`)
+        Axios.get(`https://wordbud-backend.onrender.com/AdminRoute/updatecontent/${id}`)
             .then((res) => {
                 if (res.status === 200) {
                     const { name, image, content, quiz } = res.data;
@@ -40,7 +40,7 @@ function EditContent() {
 
     const handleSubmit = () => {
         const data = { name: newData[0], image: newData[1], content: newData[2], quiz: newData[3] };
-        Axios.put(`https://language-app-3v1c.onrender.com/AdminRoute/updatecontent/${id}`, data)
+        Axios.put(`https://wordbud-backend.onrender.com/AdminRoute/updatecontent/${id}`, data)
             .then((res) => {
                 if (res.status === 200) {
                     alert("All changes are saved");

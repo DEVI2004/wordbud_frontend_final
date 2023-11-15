@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './loginstyle.css'; 
 import {Link, useNavigate} from "react-router-dom"
+import Wordbudnavbar from "./Wordbudnavbar";
 function LoginPage() {
     const navigate=useNavigate();
   const [loginType, setLoginType] = useState("user");
@@ -10,7 +11,7 @@ function LoginPage() {
   const [userpassword, setuserpassword] = useState("");
 
   const handleLogin = () => {
-    const UsersUrl = "https://language-app-3v1c.onrender.com/UserRoute";
+    const UsersUrl = "https://wordbud-backend.onrender.com/UserRoute";
 
     if (loginType === "admin") {
       if(userName==="admin" && password==="1234"){
@@ -51,21 +52,24 @@ function LoginPage() {
   };
 
   return (
-    <div className="app ">
+   <div>
+    <Wordbudnavbar />
+     <div className="app ">
+
       <div className="login-form ">
         <div className="title ">Sign In</div>
         <div className="button-container">
           <button
-            className={`col-6 btn  ${loginType === "user" ? "active btn-secondary" : ""}`}
+            className={`col-6 btn  ${loginType === "user" ? "active btn-success" : ""}`}
             onClick={() => setLoginType("user")}
           >
             User Login
           </button>
           <button
-            className={`col-6 btn  ${loginType === "admin" ? "active btn-secondary" : ""}`}
+            className={`col-6 btn  ${loginType === "admin" ? "active btn-sucess" : ""}`}
             onClick={() => setLoginType("admin")}
           >
-            Admin Login
+            
           </button>
         </div>
         <div className="input-container">
@@ -87,7 +91,7 @@ function LoginPage() {
                 onChange={(e) => setuserpassword(e.target.value)}
                 
               />
-              <Link to="/NewUser" className="text-primary" style={{textDecoration:"none",textAlign:"center"}}><span>New User?? Click to Create Account</span></Link>
+              <Link to="/NewUser" className="text-primary" style={{textDecoration:"none",textAlign:"center"}}><span>Create Account</span></Link>
               
               </div>
             </div>
@@ -114,11 +118,12 @@ function LoginPage() {
           )}
         </div>
         <div className="button-container">
-          <button className="btn btn-secondary"  onClick={handleLogin}>
+          <button className="btn btn-success"  onClick={handleLogin}>
             Login
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 }

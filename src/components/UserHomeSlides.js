@@ -9,7 +9,7 @@ function UserHomeSlides() {
   const navigate = useNavigate();
   const {id}=useParams();
   useEffect(() => {
-    Axios.get("https://language-app-3v1c.onrender.com/AdminRoute/")
+    Axios.get("https://wordbud-backend.onrender.com/AdminRoute/")
       .then((res) => {
         if (res.status === 200) setData(res.data);
         else Promise.reject();
