@@ -18,7 +18,7 @@ const UserSubmissions = ({ userId }) => {
 
   return (
     <div>
-      <div className="example " style={{ borderRadius: "25px", backgroundColor: "rgba(35,120,65)", height: "80vh", overflowY: "scroll" }}>
+      <div className="example " style={{ borderRadius: "0px", backgroundColor: "rgba(35,120,65)", height: "80vh", overflowY: "scroll" }}>
         <h2 style={{ textAlign: "center", fontFamily: "Gill Sans Extrabold" }}>Your Submissions</h2>
         {submissions.length === 0 ? (
           <h5 style={{ textAlign: "center", fontSize: "1.5rem", marginTop: "2rem" ,fontFamily:"Gill Sans Extrabold"}}>No submissions Yet</h5>

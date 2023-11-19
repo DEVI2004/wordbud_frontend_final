@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import "./style.css"
+
 
 function AdminCreateBox(props) {
     const navigate = useNavigate();
@@ -74,7 +74,7 @@ function AdminCreateBox(props) {
              <div className="card" style={cardStyle}>
             <div className="h-100">
                 <div style={{paddingLeft:"5px"}}>
-                <button className='btn btn-primary mt-2 ' onClick={() => { navigate("/AdminHome") }}>Home</button>
+                <button className='btn btn-success mt-2 ' onClick={() => { navigate("/AdminHome") }}>Home</button>
                 </div>
                 
                 <div className="row h-100 justify-content-center mt-3">

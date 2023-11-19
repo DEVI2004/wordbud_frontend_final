@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './loginstyle.css'; 
+
 import {Link, useNavigate} from "react-router-dom"
 import Wordbudnavbar from "./Wordbudnavbar";
 function LoginPage() {
@@ -14,7 +15,7 @@ function LoginPage() {
     const UsersUrl = "https://wordbud-backend.onrender.com/UserRoute";
 
     if (loginType === "admin") {
-      if(userName==="admin" && password==="1234"){
+      if(userName==="wordbud" && password==="1234"){
             navigate("/AdminHome")
       }
       else{
@@ -60,16 +61,16 @@ function LoginPage() {
         <div className="title ">Sign In</div>
         <div className="button-container">
           <button
-            className={`col-6 btn  ${loginType === "user" ? "active btn-success" : ""}`}
+            className={`col-6 btn  ${loginType === "user" ? "active btn-success" : "active btn-sucess"}`}
             onClick={() => setLoginType("user")}
           >
             User Login
           </button>
           <button
-            className={`col-6 btn  ${loginType === "admin" ? "active btn-sucess" : ""}`}
+            className={`col-6 btn ${loginType === "admin" ? "active btn-sucess" : ""}`}
             onClick={() => setLoginType("admin")}
           >
-            
+            Admin Login
           </button>
         </div>
         <div className="input-container">

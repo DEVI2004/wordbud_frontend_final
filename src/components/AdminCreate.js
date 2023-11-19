@@ -37,7 +37,7 @@ function AdminCreate(){
                 <AdminCreateBox
                     getState={getState}
                     nameValue=""
-                    imageValue="https://cdn.thecollector.com/wp-content/uploads/2023/09/most-spoken-languages-in-the-world.jpg?width=1400&quality=70"
+                    imageValue="https://cdn.thecollector.com/wp-content/uploads/2023/09/most-spoke"
                     ContentValue=""
                     questionValue={[
                         ["","","","","",""],

@@ -7,7 +7,7 @@
     gap: 20px;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("./IMG_9170.JPG");
+    background-image: url("https://media.istockphoto.com/id/1032296056/photo/young-woman-and-man-in-headphones-learning-different-languages-communicating.jpg?s=612x612&w=0&k=20&c=-lgeXoB7t8Uwp5gIRkZxhcgIezrYu3wIosP2_sWBIew=");
     background-size: cover;
     
 }
@@ -48,6 +48,48 @@
     padding: 2rem;
     box-shadow: 0 4px 8px 0 green, 0 6px 20px 0 green;
   }
+/* 
+  .login-form {
+    margin: 0 auto;
+    width: 300px;
+    padding: 20px;
+  }
+
+  
+  .login-button {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .login-button:hover {
+    transform: scale(1.1);
+  }
+
+  .wordbud-header {
+    animation: fadein 1s ease-in-out;
+  }
+  
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+  .container {
+    padding: 20px;
+  }
+  
+  .login-form {
+    margin-top: 20px;
+  }
+  
+  .login-button {
+    margin-top: 20px;
+  }
+   */
 
   /* #navbar {
     position: absolute;
